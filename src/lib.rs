@@ -24,6 +24,7 @@
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![cfg_attr(feature = "small-error", feature(extern_types, allocator_api))]
+#![feature(specialization)]
 
 macro_rules! with_std { ($($i:item)*) => ($(#[cfg(feature = "std")]$i)*) }
 macro_rules! without_std { ($($i:item)*) => ($(#[cfg(not(feature = "std"))]$i)*) }
